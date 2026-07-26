@@ -157,4 +157,4 @@ If this theme saved you time, consider supporting development on Ko-fi.
 
 ## License
 
-Commerce Realty Lite is free for personal and commercial use.
+Commerce Realty Lite is free for personal and commercial use. Redistribution or resale of the theme itself is not permitted.
