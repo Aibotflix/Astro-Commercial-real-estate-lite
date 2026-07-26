@@ -133,6 +133,14 @@ For Netlify forms, set `netlify: true` on the `<form>` tag in `contact.astro`.
 
 ---
 
+## Support
+
+If this theme saved you time, consider supporting development on Ko-fi.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/aibotflix)
+
+---
+
 ## License
 
 Commerce Realty Lite is free for personal and commercial use.
