@@ -4,6 +4,8 @@
 
 Stop hacking residential templates for office towers, retail plazas, and industrial warehouses. Commerce Realty Lite is purpose-built for brokerages, landlords, and CRE startups who need a fast, modern, SEO-ready site — without the bloat.
 
+[Live Demo](https://astro-commercial-real-estate-lite.pages.dev/) • [GitHub](https://github.com/Aibotflix/Astro-Commercial-real-estate-lite)
+
 ---
 
 ## Why Commerce Realty?
