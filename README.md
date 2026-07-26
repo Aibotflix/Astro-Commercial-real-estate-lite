@@ -72,6 +72,15 @@ npm run dev
 
 Open `http://localhost:4321` — you're live.
 
+### Customize for your domain
+
+Before deploying, update two files with your own URL:
+
+- `astro.config.mjs` — change `site` to your domain
+- `src/data/site.json` — change `url` to your domain
+
+This ensures canonical URLs and Open Graph image paths point to your site.
+
 ### Edit your content
 
 Edit the JSON files in `src/data/`:
