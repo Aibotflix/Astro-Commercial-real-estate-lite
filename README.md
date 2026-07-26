@@ -31,6 +31,7 @@ A fully functional, production-ready CRE website. Deploy in 5 minutes.
 - **Type filter** — Click a property type to filter (Office, Retail, Industrial, Land)
 - **Category links** — Browse by type from the homepage with URL-based filtering (`?type=Office`)
 - **Dark mode** — System-aware default + manual toggle, persistent across pages with View Transitions
+- **Mobile-first responsive** — Looks great on every screen size, from phone to ultrawide
 - **Mobile bottom nav** — App-style tab bar for thumb-friendly navigation
 - **Full SEO** — Per-page title, meta description, Open Graph tags, canonical URLs, sitemap-ready
 - **Tailwind CSS v4** — CSS-first tokens, OKLCH color space, container queries
