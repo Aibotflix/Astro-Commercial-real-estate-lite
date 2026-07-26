@@ -8,7 +8,7 @@ Stop hacking residential templates for office towers, retail plazas, and industr
 
 ---
 
-![Commerce Realty Lite screenshot](/Commerce%20Realty.png)
+![Commerce Realty Lite screenshot](public/commerce-realty.png)
 
 ## Why Commerce Realty?
 
