@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ListingCard from '../components/ListingCard.astro'
+import { listings } from '../data/site'
+
+const propertyTypes = [...new Set(listings.map((l) => l.type))]
+---
+
+<BaseLayout title="Listings" description="Browse our commercial property listings — office, retail, industrial, and land.">
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h1 class="text-3xl font-extrabold mb-2">Properties</h1>
+    <p class="text-muted mb-8">{listings.length} commercial properties available</p>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <button data-filter="all" aria-pressed="true" class="px-4 py-2 text-sm rounded-lg border border-border bg-accent text-white font-medium transition-colors cursor-pointer" onclick="filter('all')">All</button>
+      {propertyTypes.map((t) => (
+        <button data-filter={t} aria-pressed="false" class="px-4 py-2 text-sm rounded-lg border border-border hover:bg-accent/10 font-medium transition-colors cursor-pointer" onclick={`filter('${t}')`}>{t}</button>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+      {listings.map((l) => (
+        <div data-type={l.type}>
+          <ListingCard {...l} />
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline data-astro-rerun>
+  window.filter = function (type) {
+    document.querySelectorAll('[data-type]').forEach((el) => {
+      el.style.display = type === 'all' || el.dataset.type === type ? '' : 'none'
+    })
+    document.querySelectorAll('[data-filter]').forEach((btn) => {
+      var active = btn.dataset.filter === type
+      btn.classList.toggle('bg-accent', active)
+      btn.classList.toggle('text-white', active)
+      btn.classList.toggle('bg-transparent', !active)
+      btn.classList.toggle('text-ink', !active)
+      btn.setAttribute('aria-pressed', String(active))
+    })
+  }
+
+  var params = new URLSearchParams(location.search)
+  var initial = params.get('type')
+  if (initial) window.filter(initial)
+</script>

@@ -1,0 +1,58 @@
+---
+import '../styles/global.css'
+import { ClientRouter } from 'astro:transitions'
+import { site } from '../data/site'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+  title?: string
+  description?: string
+  image?: string
+}
+
+const { title, description, image } = Astro.props
+const metaTitle = title ? `${title} — ${site.name}` : site.name
+const metaDesc = description || site.description
+const metaImage = image || `${site.url}/og-image.jpg`
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <ClientRouter />
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDesc} />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDesc} />
+    <meta property="og:image" content={metaImage} />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href={Astro.url.href} />
+    <script is:inline>
+      function applyTheme() {
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      }
+      document.addEventListener('astro:after-swap', applyTheme)
+      applyTheme()
+      window.toggleDark = function () {
+        document.documentElement.classList.toggle('dark')
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
+      }
+    </script>
+  </head>
+  <body class="bg-canvas text-ink transition-colors pb-16 md:pb-0">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-lg focus:no-underline">Skip to content</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

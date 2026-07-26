@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-canvas: oklch(0.99 0 0);
+  --color-surface: oklch(0.97 0.005 260);
+  --color-ink: oklch(0.15 0.015 260);
+  --color-muted: oklch(0.55 0.01 260);
+  --color-accent: oklch(0.50 0.18 260);
+  --color-border: oklch(0.88 0.01 260);
+}
+
+.dark {
+  --color-canvas: oklch(0.18 0.015 260);
+  --color-surface: oklch(0.22 0.015 260);
+  --color-ink: oklch(0.92 0.005 90);
+  --color-muted: oklch(0.65 0.01 260);
+  --color-accent: oklch(0.65 0.18 260);
+  --color-border: oklch(0.28 0.01 260);
+}
+
+@utility reveal {
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 25%;
+}
+
+@utility safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+}

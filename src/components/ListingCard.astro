@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string
+  type: string
+  address: string
+  sqft: string
+  price: string
+  image: string
+  description: string
+  slug: string
+}
+
+const { title, type, address, sqft, price, image, description, slug } = Astro.props
+const href = `/listings/${slug}/`
+---
+
+<a href={href} class="block rounded-xl border border-border overflow-hidden bg-surface shadow-sm hover:shadow-md transition-shadow no-underline">
+  <div class="aspect-[16/9] bg-border overflow-hidden">
+    <img src={image} alt={title} class="w-full h-full object-cover" loading="lazy" />
+  </div>
+  <div class="p-4">
+    <span class="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-1">{type}</span>
+    <h3 class="text-lg font-bold mb-1 text-ink">{title}</h3>
+    <p class="text-sm text-muted mb-2">{address}</p>
+    <p class="text-sm text-muted mb-3">{description}</p>
+    <div class="flex items-center justify-between text-sm">
+      <span class="font-medium">{sqft} sq ft</span>
+      <span class="text-accent font-bold">{price}</span>
+    </div>
+  </div>
+</a>

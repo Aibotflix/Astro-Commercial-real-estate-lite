@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { site } from '../data/site'
+---
+
+<BaseLayout title="Contact" description="Get in touch with {site.name} for all your commercial real estate needs.">
+  <section class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div>
+      <h1 class="text-3xl font-extrabold mb-4">Contact Us</h1>
+      <p class="text-muted mb-8">Ready to start your search or have questions? Reach out to our team.</p>
+
+      <div class="space-y-4 text-sm">
+        <div>
+          <h3 class="font-semibold">Address</h3>
+          <p class="text-muted">{site.address}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Phone</h3>
+          <p class="text-muted">{site.phone}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Email</h3>
+          <p class="text-muted">{site.email}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Hours</h3>
+          <p class="text-muted">Mon–Fri: 9:00 AM – 6:00 PM<br />Sat: 10:00 AM – 2:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="space-y-4" action="#" method="POST" data-netlify="true" netlify>
+      <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+        <input id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-accent" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+        <input id="email" name="email" type="email" required class="w-full px-4 py-2 rounded-lg border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-accent" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded-lg border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+      </div>
+      <button type="submit" class="bg-accent hover:brightness-90 text-white font-semibold px-8 py-3 rounded-lg transition-all cursor-pointer">Send Message</button>
+    </form>
+  </section>
+</BaseLayout>

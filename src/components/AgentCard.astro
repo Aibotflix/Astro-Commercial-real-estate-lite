@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string
+  title: string
+  photo: string
+  bio: string
+}
+
+const { name, title, photo, bio } = Astro.props
+---
+
+<div class="rounded-xl border border-border bg-surface p-6 text-center shadow-sm">
+  <div class="w-20 h-20 rounded-full bg-border mx-auto mb-4 overflow-hidden">
+    <img src={photo} alt={name} class="w-full h-full object-cover" loading="lazy" />
+  </div>
+  <h3 class="font-bold">{name}</h3>
+  <p class="text-sm text-accent mb-2">{title}</p>
+  <p class="text-sm text-muted">{bio}</p>
+</div>

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sarah Chen",
+    "title": "Senior Broker",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+    "phone": "(555) 111-2222",
+    "email": "sarah@commercerealty.com",
+    "bio": "15+ years in office and industrial leasing across Manhattan."
+  },
+  {
+    "name": "Marcus Johnson",
+    "title": "Investment Specialist",
+    "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
+    "phone": "(555) 222-3333",
+    "email": "marcus@commercerealty.com",
+    "bio": "Specializes in retail and mixed-use investment sales."
+  },
+  {
+    "name": "Elena Rodriguez",
+    "title": "Land Advisor",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+    "phone": "(555) 333-4444",
+    "email": "elena@commercerealty.com",
+    "bio": "Land acquisition and development consulting expert."
+  }
+]

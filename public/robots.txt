@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cre-lite.example.com/sitemap-index.xml

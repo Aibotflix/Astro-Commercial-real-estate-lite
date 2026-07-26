@@ -1,0 +1,87 @@
+---
+const { listings } = Astro.props
+---
+
+<div id="slideout-overlay" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-label="Property details">
+  <div id="slideout-backdrop" class="absolute inset-0 bg-black/50 transition-opacity"></div>
+  <aside class="absolute top-0 right-0 w-full max-w-lg h-full bg-canvas overflow-y-auto shadow-2xl translate-x-full transition-transform duration-300 ease-out" id="slideout-panel">
+    <div class="sticky top-0 z-10 bg-canvas/90 backdrop-blur flex items-center justify-between px-6 py-4 border-b border-border">
+      <span class="text-xs font-semibold uppercase tracking-wider text-accent" id="slideout-type"></span>
+      <button onclick="closeSlideout()" class="p-1 rounded-lg hover:bg-surface transition-colors cursor-pointer" aria-label="Close">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="aspect-[16/9] bg-border overflow-hidden">
+      <img id="slideout-image" class="w-full h-full object-cover" alt="" />
+    </div>
+
+    <div class="p-6 space-y-4">
+      <h2 class="text-2xl font-bold" id="slideout-title"></h2>
+      <p class="text-sm text-muted flex items-center gap-1.5" id="slideout-address"></p>
+
+      <div class="flex items-center justify-between py-4 border-y border-border">
+        <span class="text-lg text-muted" id="slideout-sqft"></span>
+        <span class="text-2xl font-bold text-accent" id="slideout-price"></span>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Description</h3>
+        <p class="text-sm leading-relaxed" id="slideout-description"></p>
+      </div>
+
+      <a id="slideout-inquire" href="/contact/" class="block text-center bg-accent hover:brightness-90 text-white font-semibold px-6 py-3 rounded-xl transition-all no-underline mt-6">Inquire About This Property</a>
+    </div>
+  </aside>
+</div>
+
+<script type="application/json" id="slideout-data">{JSON.stringify(listings)}</script>
+
+<script data-astro-rerun>
+  const $ = (id) => document.getElementById(id)
+  const listings = JSON.parse($('slideout-data').textContent)
+
+  function openSlideout(index) {
+    const l = listings[index]
+    if (!l) return
+    $('slideout-overlay').classList.remove('hidden')
+    $('slideout-panel').classList.remove('translate-x-full')
+    $('slideout-type').textContent = l.type
+    $('slideout-title').textContent = l.title
+    $('slideout-address').textContent = l.address
+    $('slideout-sqft').textContent = l.sqft + ' sq ft'
+    $('slideout-price').textContent = l.price
+    $('slideout-description').textContent = l.description
+    $('slideout-image').src = l.image
+    $('slideout-image').alt = l.title
+    $('slideout-inquire').href = '/contact/?property=' + encodeURIComponent(l.title)
+    document.body.style.overflow = 'hidden'
+  }
+
+  window.closeSlideout = function () {
+    $('slideout-panel').classList.add('translate-x-full')
+    setTimeout(() => {
+      $('slideout-overlay').classList.add('hidden')
+      document.body.style.overflow = ''
+    }, 300)
+  }
+
+  var c = window._sClick = window._sClick || []
+  c.forEach(f => document.removeEventListener('click', f))
+  var k = window._sKey = window._sKey || []
+  k.forEach(f => document.removeEventListener('keydown', f))
+
+  var cf = function (e) {
+    if (e.target.closest('a')) return
+    var card = e.target.closest('[data-index]')
+    if (card) { var idx = parseInt(card.dataset.index); if (!isNaN(idx)) openSlideout(idx) }
+  }
+  var kf = function (e) { if (e.key === 'Escape') window.closeSlideout() }
+
+  document.addEventListener('click', cf)
+  document.addEventListener('keydown', kf)
+  window._sClick = [cf]
+  window._sKey = [kf]
+</script>

@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Downtown Office Tower",
+    "type": "Office",
+    "address": "200 Market St, New York, NY",
+    "sqft": "45,000",
+    "price": "$12,500,000",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=450&fit=crop",
+    "description": "Class A office space with panoramic views, 24/7 access, and on-site parking."
+  },
+  {
+    "title": "Retail Plaza",
+    "type": "Retail",
+    "address": "55 Broadway, New York, NY",
+    "sqft": "12,000",
+    "price": "$3,800,000",
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=450&fit=crop",
+    "description": "Prime retail space with high foot traffic in the financial district."
+  },
+  {
+    "title": "Industrial Warehouse",
+    "type": "Industrial",
+    "address": "800 Commerce Blvd, Brooklyn, NY",
+    "sqft": "85,000",
+    "price": "$6,200,000",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=450&fit=crop",
+    "description": "Modern warehouse with 28-ft ceilings, loading docks, and easy highway access."
+  },
+  {
+    "title": "Development Land Parcel",
+    "type": "Land",
+    "address": "42 River Rd, Jersey City, NJ",
+    "sqft": "120,000",
+    "price": "$4,100,000",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=450&fit=crop",
+    "description": "Zoned for mixed-use development with approved site plan."
+  },
+  {
+    "title": "Medical Office Building",
+    "type": "Office",
+    "address": "300 Health Dr, New York, NY",
+    "sqft": "28,000",
+    "price": "$7,800,000",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=450&fit=crop",
+    "description": "Turnkey medical office with exam rooms, lab space, and patient parking."
+  },
+  {
+    "title": "Strip Mall",
+    "type": "Retail",
+    "address": "1500 Main Ave, Newark, NJ",
+    "sqft": "18,500",
+    "price": "$2,950,000",
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=450&fit=crop&crop=left",
+    "description": "Anchored strip mall with 8 units and strong occupancy history."
+  }
+]
