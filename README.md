@@ -8,6 +8,8 @@ Stop hacking residential templates for office towers, retail plazas, and industr
 
 ---
 
+![Commerce Realty Lite screenshot](/Commerce%20Realty.png)
+
 ## Why Commerce Realty?
 
 There are 100+ Astro themes for residential real estate. Zero for commercial. If you sell, lease, or develop **office, retail, industrial, or land**, you've been stuck adapting a residential template that shows family photos and school ratings instead of sqft, zoning, and loading docks.
