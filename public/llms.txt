@@ -1,0 +1,16 @@
+# Commerce Realty Lite
+
+> Commercial real estate theme for Astro 7 + Tailwind CSS v4. Purpose-built for brokerages, landlords, and CRE startups.
+
+## Pages
+
+- [Home](https://astro-commercial-real-estate-lite.pages.dev/): Landing page with hero, stats, property type cards, and featured listings.
+- [Listings](https://astro-commercial-real-estate-lite.pages.dev/listings/): Browse all commercial properties with type filter.
+- [About](https://astro-commercial-real-estate-lite.pages.dev/about/): Company info and agent team profiles.
+- [Contact](https://astro-commercial-real-estate-lite.pages.dev/contact/): Contact form and office details.
+- [Downtown Office Tower](https://astro-commercial-real-estate-lite.pages.dev/listings/downtown-office-tower/): 45,000 sq ft Class A office — $12,500,000.
+- [Retail Plaza](https://astro-commercial-real-estate-lite.pages.dev/listings/retail-plaza/): 12,000 sq ft prime retail — $3,800,000.
+- [Industrial Warehouse](https://astro-commercial-real-estate-lite.pages.dev/listings/industrial-warehouse/): 85,000 sq ft modern warehouse — $6,200,000.
+- [Development Land Parcel](https://astro-commercial-real-estate-lite.pages.dev/listings/development-land-parcel/): 120,000 sq ft zoned mixed-use — $4,100,000.
+- [Medical Office Building](https://astro-commercial-real-estate-lite.pages.dev/listings/medical-office-building/): 28,000 sq ft turnkey medical office — $7,800,000.
+- [Strip Mall](https://astro-commercial-real-estate-lite.pages.dev/listings/strip-mall/): 18,500 sq ft anchored strip mall — $2,950,000.
