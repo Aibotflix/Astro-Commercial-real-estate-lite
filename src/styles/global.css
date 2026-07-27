@@ -6,7 +6,7 @@
   --color-canvas: oklch(0.99 0 0);
   --color-surface: oklch(0.97 0.005 260);
   --color-ink: oklch(0.15 0.015 260);
-  --color-muted: oklch(0.55 0.01 260);
+  --color-muted: oklch(0.42 0.01 260);
   --color-accent: oklch(0.50 0.18 260);
   --color-border: oklch(0.88 0.01 260);
 }
@@ -15,7 +15,7 @@
   --color-canvas: oklch(0.18 0.015 260);
   --color-surface: oklch(0.22 0.015 260);
   --color-ink: oklch(0.92 0.005 90);
-  --color-muted: oklch(0.65 0.01 260);
+  --color-muted: oklch(0.78 0.01 260);
   --color-accent: oklch(0.65 0.18 260);
   --color-border: oklch(0.28 0.01 260);
 }
