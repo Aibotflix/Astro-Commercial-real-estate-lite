@@ -45,7 +45,7 @@ A fully functional, production-ready CRE website. Deploy in 5 minutes.
 - **JSON data files** — All content in editable `site.json`, `listings.json`, `agents.json`, `stats.json` — no code changes needed
 - **Zero JS framework** — No React, no Vue, no Svelte. Just vanilla JS where needed.
 - **Favicon + robots.txt** — Included and configured
-- **10 lighthouse score** — Minimal JS, optimized images, semantic HTML
+- **96 Lighthouse Performance** — Minimal JS, semantic HTML, optimized loading
 
 ## Tech Stack
 
